@@ -34,6 +34,11 @@ namespace CtrlFDialog
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Search();
+        }
+
+        private void Search()
+        {
             this.Close();
             _mainWindow.PerformSearch(txtSearch.Text.Trim());
         }
@@ -41,6 +46,12 @@ namespace CtrlFDialog
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                Search();
         }
     }
 }

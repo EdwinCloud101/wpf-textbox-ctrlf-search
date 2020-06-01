@@ -36,9 +36,9 @@ namespace CtrlFDialog
         public void PerformSearch(string content)
         {
             _isInSearchMode = true;
-            _searchTerm = content;
+            _searchTerm = content.ToLower();
 
-            string originalContent = txtContent.Text.Substring(txtContent.CaretIndex + txtContent.SelectedText.Length);
+            string originalContent = txtContent.Text.Substring(txtContent.CaretIndex + txtContent.SelectedText.Length).ToLower();
 
             int indexFound = originalContent.IndexOf(content, StringComparison.Ordinal);
             if (indexFound == -1) return;

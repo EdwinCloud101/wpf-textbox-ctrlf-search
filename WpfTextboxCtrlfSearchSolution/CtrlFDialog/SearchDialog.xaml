@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SearchDialog" Height="151.207" Width="317.404" Loaded="SearchDialog_OnLoaded">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" x:Name="txtSearch" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" x:Name="txtSearch" FontSize="18" KeyUp="txtSearch_KeyUp"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="109,78,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="201,78,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
 
