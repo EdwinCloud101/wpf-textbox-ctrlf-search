@@ -40,10 +40,10 @@ namespace CtrlFDialog
 
             string originalContent = txtContent.Text.Substring(txtContent.CaretIndex + txtContent.SelectedText.Length).ToLower();
 
-            int indexFound = originalContent.IndexOf(content, StringComparison.Ordinal);
+            int indexFound = originalContent.IndexOf(_searchTerm, StringComparison.Ordinal);
             if (indexFound == -1) return;
 
-            txtContent.Select(indexFound + (txtContent.Text.Length - originalContent.Length), content.Length);
+            txtContent.Select(indexFound + (txtContent.Text.Length - originalContent.Length), _searchTerm.Length);
         }
 
     }
