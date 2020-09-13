@@ -53,5 +53,11 @@ namespace CtrlFDialog
             if (e.Key == Key.Enter)
                 Search();
         }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Escape)
+                this.Close();
+        }
     }
 }
